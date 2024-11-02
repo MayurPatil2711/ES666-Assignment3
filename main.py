@@ -11,14 +11,10 @@ path = 'Images{}*'.format(os.sep)  # Use os.sep, Windows, linux have different p
 
 all_submissions = glob.glob('./src/*')
 os.makedirs('./results/', exist_ok=True)
-<<<<<<< HEAD
 for idx, algo in enumerate(all_submissions):
-    print('****************\tRunning Awesome Stitcher developed by: {}  | {} of {}\t********************'.format(
-        algo.split(os.sep)[-1], idx, len(all_submissions)))
-=======
+    print('****************\tRunning Awesome Stitcher developed by: {}  | {} of {}\t********************'.format(algo.split(os.sep)[-1], idx, len(all_submissions)))
 for idx,algo in enumerate(all_submissions):
     print('****************\tRunning Awesome Stitcher developed by: {}  | {} of {}\t********************'.format(algo.split(os.sep)[-1],idx+1,len(all_submissions)))
->>>>>>> 91a9e9e5732f8ab47726556815991cec39badf43
     try:
         module_name = '{}_{}'.format(algo.split(os.sep)[-1], 'stitcher')
         filepath = '{}{}stitcher.py'.format(algo, os.sep, 'stitcher.py')
